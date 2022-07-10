@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
+    <title>Coverage for scipy/signal/filter_design.py: 42%</title>
+    <link rel="icon" sizes="32x32" href="favicon_32.png">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="coverage_html.js" defer></script>
+</head>
+<body class="pyfile">
+<header>
+    <div class="content">
+        <h1>
+            <span class="text">Coverage for </span><b>scipy/signal/filter_design.py</b>:
+            <span class="pc_cov">42%</span>
+        </h1>
+        <div id="help_panel_wrapper">
+            <input id="help_panel_state" type="checkbox">
+            <label for="help_panel_state">
+                <img id="keyboard_icon" src="keybd_closed.png" alt="Show/hide keyboard shortcuts" />
+            </label>
+            <div id="help_panel">
+                <p class="legend">Shortcuts on this page</p>
+                <div>
+                    <p class="keyhelp">
+                        <kbd>r</kbd>
+                        <kbd>m</kbd>
+                        <kbd>x</kbd>
+                        <kbd>p</kbd>
+                        &nbsp; toggle line displays
+                    </p>
+                    <p class="keyhelp">
+                        <kbd>j</kbd>
+                        <kbd>k</kbd> &nbsp; next/prev highlighted chunk
+                    </p>
+                    <p class="keyhelp">
+                        <kbd>0</kbd> &nbsp; (zero) top of page
+                    </p>
+                    <p class="keyhelp">
+                        <kbd>1</kbd> &nbsp; (one) first highlighted chunk
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h2>
+            <span class="text">10 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">5<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">5<span class="text"> missing</span></button>
+            <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
+            <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">0<span class="text"> partial</span></button>
+        </h2>
+        <div style="display: none;">
+            <button type="button" class="button_next_chunk" data-shortcut="j">Next highlighted chunk</button>
+            <button type="button" class="button_prev_chunk" data-shortcut="k">Previous highlighted chunk</button>
+            <button type="button" class="button_top_of_page" data-shortcut="0">Goto top of page</button>
+            <button type="button" class="button_first_chunk" data-shortcut="1">Goto first highlighted chunk</button>
+        </div>
+    </div>
+</header>
+<main id="source">
+    <p class="pln"><span class="n"><a id="t1" href="#t1">1</a></span><span class="t"><span class="com"># This file is not meant for public use and will be removed in SciPy v2.0.0.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t2" href="#t2">2</a></span><span class="t"><span class="com"># Use the `scipy.signal` namespace for importing the functions</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t3" href="#t3">3</a></span><span class="t"><span class="com"># included below.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t4" href="#t4">4</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t5" href="#t5">5</a></span><span class="t"><span class="key">import</span> <span class="nam">warnings</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t6" href="#t6">6</a></span><span class="t"><span class="key">from</span> <span class="op">.</span> <span class="key">import</span> <span class="nam">_filter_design</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t7" href="#t7">7</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t8" href="#t8">8</a></span><span class="t"><span class="nam">__all__</span> <span class="op">=</span> <span class="op">[</span>  <span class="com"># noqa: F822</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t9" href="#t9">9</a></span><span class="t">    <span class="str">'findfreqs'</span><span class="op">,</span> <span class="str">'freqs'</span><span class="op">,</span> <span class="str">'freqz'</span><span class="op">,</span> <span class="str">'tf2zpk'</span><span class="op">,</span> <span class="str">'zpk2tf'</span><span class="op">,</span> <span class="str">'normalize'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t">    <span class="str">'lp2lp'</span><span class="op">,</span> <span class="str">'lp2hp'</span><span class="op">,</span> <span class="str">'lp2bp'</span><span class="op">,</span> <span class="str">'lp2bs'</span><span class="op">,</span> <span class="str">'bilinear'</span><span class="op">,</span> <span class="str">'iirdesign'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t">    <span class="str">'iirfilter'</span><span class="op">,</span> <span class="str">'butter'</span><span class="op">,</span> <span class="str">'cheby1'</span><span class="op">,</span> <span class="str">'cheby2'</span><span class="op">,</span> <span class="str">'ellip'</span><span class="op">,</span> <span class="str">'bessel'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t">    <span class="str">'band_stop_obj'</span><span class="op">,</span> <span class="str">'buttord'</span><span class="op">,</span> <span class="str">'cheb1ord'</span><span class="op">,</span> <span class="str">'cheb2ord'</span><span class="op">,</span> <span class="str">'ellipord'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t">    <span class="str">'buttap'</span><span class="op">,</span> <span class="str">'cheb1ap'</span><span class="op">,</span> <span class="str">'cheb2ap'</span><span class="op">,</span> <span class="str">'ellipap'</span><span class="op">,</span> <span class="str">'besselap'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">    <span class="str">'BadCoefficients'</span><span class="op">,</span> <span class="str">'freqs_zpk'</span><span class="op">,</span> <span class="str">'freqz_zpk'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t">    <span class="str">'tf2sos'</span><span class="op">,</span> <span class="str">'sos2tf'</span><span class="op">,</span> <span class="str">'zpk2sos'</span><span class="op">,</span> <span class="str">'sos2zpk'</span><span class="op">,</span> <span class="str">'group_delay'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t">    <span class="str">'sosfreqz'</span><span class="op">,</span> <span class="str">'iirnotch'</span><span class="op">,</span> <span class="str">'iirpeak'</span><span class="op">,</span> <span class="str">'bilinear_zpk'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t">    <span class="str">'lp2lp_zpk'</span><span class="op">,</span> <span class="str">'lp2hp_zpk'</span><span class="op">,</span> <span class="str">'lp2bp_zpk'</span><span class="op">,</span> <span class="str">'lp2bs_zpk'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t">    <span class="str">'gammatone'</span><span class="op">,</span> <span class="str">'iircomb'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t">    <span class="str">'atleast_1d'</span><span class="op">,</span> <span class="str">'poly'</span><span class="op">,</span> <span class="str">'polyval'</span><span class="op">,</span> <span class="str">'roots'</span><span class="op">,</span> <span class="str">'resize'</span><span class="op">,</span> <span class="str">'absolute'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t">    <span class="str">'logspace'</span><span class="op">,</span> <span class="str">'tan'</span><span class="op">,</span> <span class="str">'log10'</span><span class="op">,</span> <span class="str">'arctan'</span><span class="op">,</span> <span class="str">'arcsinh'</span><span class="op">,</span> <span class="str">'exp'</span><span class="op">,</span> <span class="str">'arccosh'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t21" href="#t21">21</a></span><span class="t">    <span class="str">'ceil'</span><span class="op">,</span> <span class="str">'conjugate'</span><span class="op">,</span> <span class="str">'append'</span><span class="op">,</span> <span class="str">'prod'</span><span class="op">,</span> <span class="str">'full'</span><span class="op">,</span> <span class="str">'array'</span><span class="op">,</span> <span class="str">'mintypecode'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t22" href="#t22">22</a></span><span class="t">    <span class="str">'npp_polyval'</span><span class="op">,</span> <span class="str">'polyvalfromroots'</span><span class="op">,</span> <span class="str">'optimize'</span><span class="op">,</span> <span class="str">'sp_fft'</span><span class="op">,</span> <span class="str">'comb'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t">    <span class="str">'float_factorial'</span><span class="op">,</span> <span class="str">'root_scalar'</span><span class="op">,</span> <span class="str">'abs'</span><span class="op">,</span> <span class="str">'maxflat'</span><span class="op">,</span> <span class="str">'yulewalk'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t24" href="#t24">24</a></span><span class="t">    <span class="str">'EPSILON'</span><span class="op">,</span> <span class="str">'filter_dict'</span><span class="op">,</span> <span class="str">'band_dict'</span><span class="op">,</span> <span class="str">'bessel_norms'</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t25" href="#t25">25</a></span><span class="t"><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t26" href="#t26">26</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t27" href="#t27">27</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t28" href="#t28">28</a></span><span class="t"><span class="key">def</span> <span class="nam">__dir__</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t29" href="#t29">29</a></span><span class="t">    <span class="key">return</span> <span class="nam">__all__</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t"><span class="key">def</span> <span class="nam">__getattr__</span><span class="op">(</span><span class="nam">name</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">    <span class="key">if</span> <span class="nam">name</span> <span class="key">not</span> <span class="key">in</span> <span class="nam">__all__</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">        <span class="key">raise</span> <span class="nam">AttributeError</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">            <span class="str">"scipy.signal.filter_design is deprecated and has no attribute "</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">            <span class="str">f"{name}. Try looking in scipy.signal instead."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">    <span class="nam">warnings</span><span class="op">.</span><span class="nam">warn</span><span class="op">(</span><span class="str">f"Please use `{name}` from the `scipy.signal` namespace, "</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">                  <span class="str">"the `scipy.signal.filter_design` namespace is deprecated."</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t">                  <span class="nam">category</span><span class="op">=</span><span class="nam">DeprecationWarning</span><span class="op">,</span> <span class="nam">stacklevel</span><span class="op">=</span><span class="num">2</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t41" href="#t41">41</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t42" href="#t42">42</a></span><span class="t">    <span class="key">return</span> <span class="nam">getattr</span><span class="op">(</span><span class="nam">_filter_design</span><span class="op">,</span> <span class="nam">name</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+</main>
+<footer>
+    <div class="content">
+        <p>
+            <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.3.2</a>,
+            created at 2022-04-21 15:54 -0500
+        </p>
+    </div>
+</footer>
+</body>
+</html>
