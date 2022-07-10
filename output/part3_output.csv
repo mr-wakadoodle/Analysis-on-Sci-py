@@ -1,0 +1,43 @@
+File,Number of Assert Statements,Number of Debug Statements
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/linalg/_matfuncs_inv_ssq.py,0,5
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/linalg/_testutils.py,2,0
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/linalg/_special_matrices.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/optimize/_tstutils.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/optimize/_dual_annealing.py,0,8
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/optimize/_trustregion_constr/tr_interior_point.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/integrate/_quadrature.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/_lib/_gcutils.py,3,0
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/special/_spfun_stats.py,0,2
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/special/_testutils.py,3,0
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/special/_add_newdocs.py,0,9
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/special/_mptestutils.py,4,0
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/special/_lambertw.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/special/_orthogonal.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/special/_logsumexp.py,0,10
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/special/_precompute/wright_bessel.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/special/_precompute/gammainc_asy.py,0,2
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/special/_precompute/lambertw.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/interpolate/_rbfinterp_pythran.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/fft/_fftlog.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/fft/_basic.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/spatial/distance.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/signal/_signaltools.py,0,2
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/signal/_filter_design.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/signal/_fir_filter_design.py,0,2
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/signal/windows/_windows.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_multivariate.py,0,11
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_constants.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_stats_py.py,0,9
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_ksstats.py,0,6
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_mstats_basic.py,0,2
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_qmc.py,0,2
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_discrete_distns.py,0,1
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_kde.py,0,3
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_hypotests.py,0,3
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_distn_infrastructure.py,0,4
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_continuous_distns.py,0,185
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_morestats.py,0,5
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_entropy.py,0,7
+/Users/saisrijalakkakula/Desktop/scipy-main/scipy/stats/_levy_stable/__init__.py,0,10
+Total number of Assertions: 12
+Total number of Debugs: 303
